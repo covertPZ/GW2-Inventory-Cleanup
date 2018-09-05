@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link type="text/css" rel="stylesheet" href="./res/style.css" />
+  <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+  <link rel="shortcut icon" href="../common/favicon.ico" />
+  <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"></script>
+  <script src="./res/main.js"></script>
+  <title>GW2 Inventory Cleanup!</title>
+</head>
+
+<body>
+<div id="container">
+  <h1>GW2 Inventory Cleanup!</h1>
+  <div id="menu">At least one item slot guaranteed! Just delete random item!</div>
+  <div id="content">
+    <div id="main_info_prefix">Get suggestions how to <span class="rare">clean up</span> your accounts inventory.
+      <br />You need API key - you can get <a href="https://account.guildwars2.com/account/api-keys">it in you
+        account overview</a>.
+    </div>
+    <div id="searchForm">
+      <form>
+        <label for="apiKey">API Key:</label>
+        <input name="apiKey" id="apiKey" value="" placeholder="key comes here, paste it and press enter..." />
+        <span id="enter">enter!</span></a><br />
+        <input type="checkbox" name="consumables" id="consumables" /><label for="consumables">Ignore food and
+        utility consumable stacks</label>
+      </form>
+    </div>
+    <div id="message">Press enter to start...</div>
+    <h2 id="tips_label">Misc advice:</h2>
+    <p>Theese are various tips on how to make space in your inventory.</p>
+    <table id="tips">
+      <tbody>
+      <tr>
+        <td class="cost">Pending...</td>
+      </tr>
+      </tbody>
+    </table>
+    <h2 id="items_label">Stack these items:</h2>
+    <p>These items have incomplete stacks (less than 250 items) in multiple locations and should be stacked together
+      to save up on inventory space.</p>
+    <table id="items">
+      <tbody>
+      <tr>
+        <td class="cost">Pending...</td>
+      </tr>
+      </tbody>
+    </table>
+    <h2 id="crafts_label">Craft stack away:</h2>
+    <p>You have more than stack (250 items) of ingredients for following items. You can craft theese items to reduce
+      amount of stacks.</p>
+    <table id="crafts">
+      <tbody>
+      <tr>
+        <td class="cost">Pending...</td>
+      </tr>
+      </tbody>
+    </table>
+    <script>
+        $(document).ready(function() {
+
+          var items;
+          var itemCounts;
+
+          var canner; //67176
+          var bandit; //67518
+
+          $('#searchForm').submit(false);
+
+          $('#apiKey').keypress(function(event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+              organize($('#apiKey').val());
+            }
+          });
+
+          $('#enter').click(function() {
+            organize($('#apiKey').val());
+          });
+
+          $('#items_label').click(function() {
+            $('#items').toggle();
+          });
+
+          $('#crafts_label').click(function() {
+            $('#crafts').toggle();
+          });
+
+          $('#tips_label').click(function() {
+            $('#tips').toggle();
+          });
+        });
+      </script>
+  </div>
+</div>
+<div id="footer">
+  <a href="http://gw.zweistein.cz/gw2stacks/">Original by zwei2stein</a> |
+</div>
+</body>
+</html>

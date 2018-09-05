@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'gw2font';
+    src: url('GWTwoFont1p1.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Menomonia;
+    font-style: normal;
+    font-weight: 400;
+    src: url(menomonia.eot) format(embedded-opentype), url(menomonia.woff) format(woff), url(menomonia.ttf) format(truetype);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #dfdfdf;
+    background-image: url(top_pattern.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    font-family: Menomonia;
+    font-size: 15px;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    border-bottom: 2px solid #ffde49;
+    color: #ffde49;
+    font-family: gw2font;
+    font-size: 35px;
+    margin: 0;
+}
+
+#container {
+    background-color: #2b3132;
+    background-image: url(bottom_pattern.png), url(right_top.png);
+    background-position: bottom right, top right;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px 50px;
+    width: 800px;
+}
+
+#menu {
+    border-bottom: 1px solid #dfdfdf;
+    color: #afafaf;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.silver {
+    color: #d0cdcd;
+}
+
+.copper {
+    color: #ffab5e;
+}
+
+a:hover {
+    color: #871313;
+    text-decoration: underline;
+}
+
+#content {
+    color: #fff;
+    margin: 20px;
+}
+
+.faded {
+    color: #dfdfdf;
+}
+
+h3 {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+#footer {
+    background-color: #222;
+    border-top: 2px solid #ffde49;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: right;
+    width: 800px;
+}
+
+#main_info_prefix {
+    font-size: 18px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#main_info_suffix {
+    font-size: 18px;
+    text-align: center;
+}
+
+.icon {
+    border-bottom: 1px solid #afafaf;
+    width: 64px;
+}
+
+.icon img {
+    height: 64px;
+    width: 64px;
+}
+
+.name {
+    border-bottom: 1px solid #afafaf;
+    color: #fff;
+    font-size: 24px;
+    padding-left: 20px;
+    text-shadow: 0 0 3px #2b3132;
+}
+
+.cost {
+    border-bottom: 1px solid #afafaf;
+    color: #ffde49;
+    font-size: 24px;
+    padding-right: 20px;
+    text-align: right;
+    text-shadow: 0 0 3px #2b3132;
+}
+
+#searchForm {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+#apiKey {
+    width: 500px;
+}
+
+#message {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    text-align: center;
+}
+
+#itemIcon {
+    height: 36px;
+    width: 36px;
+}
+
+#level {
+    width: 2em;
+}
+
+#price select {
+    background-color: #2b3132;
+    border: 3px solid #695c5a;
+    color: #fff;
+    font-family: Menomonia;
+    font-size: 36px;
+    text-align: center;
+}
+
+.subnote {
+    font-size: 15px;
+    margin-top: .5em;
+}
+
+#items,
+#tips,
+#crafts {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content div {
+    font-size: 18px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#content table {
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    text-align: center;
+}
+
+td input {
+    width: 5em;
+}
+
+.lead {
+    text-align: right;
+}
+
+.follow {
+    text-align: left;
+}
+
+.question {
+    font-size: 24px;
+    padding: .5em;
+    text-align: center;
+}
+
+div#finaldate {
+    color: #ffde49;
+    font-size: 36px;
+}
+
+#footer a,
+td {
+    color: #fff;
+}
+
+#current_currency,
+.cost .currency {
+    color: #afafaf;
+}
+
+.gold,
+.rare,
+#days {
+    color: #ffde49;
+}
+
+ul,
+li {
+    display: block;
+}
+
+#price span {
+    font-size: 36px;
+    margin: .5em;
+    text-align: center;
+    text-shadow: 0 0 3px #2b3132;
+}
